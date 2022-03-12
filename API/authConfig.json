@@ -1,0 +1,35 @@
+{
+  "credentials": {
+    "tenantID": "569779cc-e9ff-4510-98cb-ed948a207bb6",
+    "clientID": "07765f31-82bc-4c13-a93d-bb185d526504"
+  },
+  "metadata": {
+    "authority": "login.microsoftonline.com",
+    "discovery": ".well-known/openid-configuration",
+    "version": "v2.0"
+  },
+  "settings": {
+    "validateIssuer": true,
+    "passReqToCallback": false,
+    "loggingLevel": "info",
+    "loggingNoPII": false
+  },
+  "protectedRoutes": {
+    "todolist": {
+      "endpoint": "/api",
+      "scopes": ["api://07765f31-82bc-4c13-a93d-bb185d526504/access_as_user"]
+    }
+  },
+  "accessMatrix": {
+    "todolist": {
+      "path": "/todolist",
+      "methods": ["GET", "POST", "PUT", "DELETE"],
+      "roles": ["Test_MIS_Sci_Students", "Test_MIS_Sci_Staff"]
+    },
+    "dashboard": {
+      "path": "/dashboard",
+      "methods": ["GET"],
+      "roles": ["Test_MIS_Sci_Staff"]
+    }
+  }
+}
